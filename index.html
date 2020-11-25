@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+
+    <link rel="stylesheet" href="./bootstrap-grid.css" />
+    <link rel="stylesheet" href="./bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+
+    <title>system monitor</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <h4 class="text-center my-5 text-uppercase text-light">System monitor</h4>
+
+      <div class="container mt-5">
+        <div class="row my-5 justify-around align-items center">
+          <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card bg-dark">
+              <div class="card-header text-center text-warning">
+                Free memory(%)
+              </div>
+              <div class="card-body">
+                <div class="card-text text-center text-light">
+                  <h1 id="free_mem"></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card bg-dark">
+              <div class="card-header text-center text-warning">CPU(%)</div>
+              <div class="card-body">
+                <div class="card-text text-center text-light">
+                  <h1 id="cpu"></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card bg-dark">
+              <div class="card-header text-center text-warning">
+                Total Memory(%)
+              </div>
+              <div class="card-body">
+                <div class="card-text text-center text-light">
+                  <h1 id="total_mem"></h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      require("./index.js");
+    </script>
+  </body>
+</html>

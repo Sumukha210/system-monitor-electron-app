@@ -1,0 +1,40 @@
+{
+  "name": "sysinfo-electron-app",
+  "productName": "CPU Monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron . -e html,js",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "sysinfo-electron-app",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./monitor.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "./monitor.ico",
+      "uninstallerIcon": "./monitor.ico",
+      "uninstallDisplayName": "CPU Monitor",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "os-utils": "0.0.14"
+  }
+}

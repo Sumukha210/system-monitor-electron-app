@@ -1,0 +1,17 @@
+directories:
+  output: dist
+  buildResources: build
+appId: sysinfo-electron-app
+win:
+  target:
+    - nsis
+  icon: ./monitor.ico
+  requestedExecutionLevel: requireAdministrator
+nsis:
+  installerIcon: ./monitor.ico
+  uninstallerIcon: ./monitor.ico
+  uninstallDisplayName: CPU Monitor
+  license: license.txt
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 11.0.3
